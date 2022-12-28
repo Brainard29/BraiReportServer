@@ -1,0 +1,47 @@
+import session from "express-session";
+import SequelizeStore from "connect-session-sequelize";
+import db from "./config/Database.js";
+import express from "express";
+import cors from "cors";
+import UserRoute from "./routes/UserRoutes.js";
+import AuthRoute from "./routes/AuthRoute.js";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from "dotenv";
+import path from "path";
+dotenv.config();
+
+const app = express();
+
+/*
+test
+const sessionStore = SequelizeStore(session.Store);
+
+const store = new sessionStore({
+    db: db
+});
+*/
+
+app.use(session({
+    secret: process.env.SESS_SECRET,
+    resave: false,
+    saveUninitialized: true,
+}));
+
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+app.use(express.static(__dirname + "/public"))
+
+
+app.use(UserRoute);
+app.use(AuthRoute);
+
+app.listen(process.env.PORT || 5000, ()=> {
+    console.log(`Server up and running at port ${process.env.PORT}...`);
+});
+
+
