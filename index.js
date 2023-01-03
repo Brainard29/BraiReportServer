@@ -13,6 +13,7 @@ dotenv.config();
 
 const app = express();
 
+const port = process.env.PORT
 /*
 test
 const sessionStore = SequelizeStore(session.Store);
@@ -40,8 +41,8 @@ app.use(express.static(__dirname + "/public"))
 app.use(UserRoute);
 app.use(AuthRoute);
 
-app.listen(process.env.PORT || 5000, ()=> {
-    console.log(`Server up and running at port ${process.env.PORT}...`);
+app.listen(port, ()=> {
+    console.log(`Server up and running...`);
 });
 
 
