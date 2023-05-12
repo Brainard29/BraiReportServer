@@ -1,6 +1,6 @@
 import User from "../models/UserModel.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export const loginUser = async (req, res) => {
   try {
@@ -33,7 +33,7 @@ export const loginUser = async (req, res) => {
 };
 
 export const matchPassword = async (password, hashedPassword) => {
-  return await bcrypt.compare(password, hashedPassword);
+  return await bcrypt.compareSync(password, hashedPassword);
 };
 
 export const logoutUser = (req, res) => {
