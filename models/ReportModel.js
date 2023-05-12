@@ -11,6 +11,13 @@ const Report = db.define('security_reports',{
             notEmpty: true
         }
     },
+    times: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate:{
+            notEmpty: true
+        }
+    },
     shift: {
         type: DataTypes.STRING,
         allowNull: false,

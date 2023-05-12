@@ -5,23 +5,15 @@ import express from "express";
 import cors from "cors";
 import UserRoute from "./routes/UserRoutes.js";
 import AuthRoute from "./routes/AuthRoute.js";
+import PdfRoute from "./routes/PdfRoute.js";
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from "dotenv";
-import path from "path";
 dotenv.config();
 
 const app = express();
 
 const port = process.env.PORT
-/*
-test
-const sessionStore = SequelizeStore(session.Store);
-
-const store = new sessionStore({
-    db: db
-});
-*/
 
 app.use(session({
     secret: process.env.SESS_SECRET,
@@ -37,9 +29,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use(express.static(__dirname + "/public"))
 
-
 app.use(UserRoute);
 app.use(AuthRoute);
+app.use(PdfRoute);
 
 app.listen(port, ()=> {
     console.log(`Server up and running...`);

@@ -1,76 +1,45 @@
 import User from "../models/UserModel.js";
- 
-export const Login = async (req, res) =>{
-    try {
-		const user = await User.findOne({
-            where: {
-                username: req.body.username
-            }
-        });
-		if (!user)
-			return res.status(401).send({ message: "Username Tidak Tersedia" });
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
-		if (req.body.password != user.password)
-			return res.status(401).send({ message: "Password Salah" });
-    
-		res.status(200).send({ message: "Login berhasil" });
-	} catch (error) {
-        console.log(error);
-		res.status(500).send({ message: "Internal Server Error" });
-	}
-}
+export const loginUser = async (req, res) => {
+  try {
+    const { username, password } = req.body;
 
-/*
-export const Register = async(req, res) =>{
-    const {username, password, role} = req.body;
-    const hashPassword = await argon2.hash(password);
-    try {
-        await User.create({
-            username: username,
-            password: hashPassword,
-            role: role
-        });
-        res.status(201).json({msg: "Register Berhasil"});
-    } catch (error) {
-        res.status(400).json({msg: error.message});
-    }
-}
-
-export const Login = async (req, res) =>{
     const user = await User.findOne({
-        where: {
-            username: req.body.username
-        }
+      where: {
+        username: username,
+      },
     });
-    if(!user) return res.status(404).json({msg: "User tidak ditemukan"});
-    const match = await argon2.verify(user.password, req.body.password);
-    if(!match) return res.status(400).json({msg: "Wrong Password"});
-    req.session.userId = user.uuid;
-    const uuid = user.uuid;
-    const username = user.username;
-    const password = user.password;
-    const role = user.role;
-    res.status(200).json({uuid, username, password, role});
-}
 
-export const Me = async (req, res) =>{
-    if(!req.session.userId){
-        return res.status(401).json({msg: "Mohon login ke akun Anda!"});
+    // Check if user exists and password matches
+    if (!user || !(await matchPassword(password, user.password))) {
+      return res.status(401).json({ message: "Username atau Password Salah." });
     }
-    const user = await User.findOne({
-        attributes:['uuid','username','password','role'],
-        where: {
-            uuid: req.session.userId
-        }
-    });
-    if(!user) return res.status(404).json({msg: "User tidak ditemukan"});
-    res.status(200).json(user);
-}
 
-export const logOut = (req, res) =>{
-    req.session.destroy((err)=>{
-        if(err) return res.status(400).json({msg: "Tidak dapat logout"});
-        res.status(200).json({msg: "Anda telah logout"});
-    });
-}
-*/
+    const accessToken = jwt.sign(
+      { id: user.id, role: user.role },
+      process.env.ACCESS_TOKEN_SECRET,
+      {
+        expiresIn: "15m",
+      }
+    );
+
+    res.json({ token: accessToken, role: user.role });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error." });
+  }
+};
+
+export const matchPassword = async (password, hashedPassword) => {
+  return await bcrypt.compare(password, hashedPassword);
+};
+
+export const logoutUser = (req, res) => {
+  try {
+    res.json({ message: "Successfully logged out." });
+  } catch (error) {
+    res.status(500).json({ message: "Internal server error." });
+  }
+};
