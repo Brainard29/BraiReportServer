@@ -16,7 +16,7 @@ const app = express();
 const port = process.env.PORT
 
 app.use(session({
-    secret: process.env.SESS_SECRET,
+    secret: "BraiReportSession",
     resave: false,
     saveUninitialized: true,
 }));
