@@ -20,8 +20,8 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
 }));
-app.use(cors());
-//app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+//app.use(cors());
+app.use(cors({ credentials: true, origin: 'https://main--imaginative-pegasus-19b45c.netlify.app' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
