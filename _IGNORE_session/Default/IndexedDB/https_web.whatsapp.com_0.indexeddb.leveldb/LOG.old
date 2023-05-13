@@ -1,0 +1,30 @@
+2023/05/10-08:56:03.655 8703 Reusing MANIFEST /Users/brainardmarayathomso/Downloads/Thesis Website/backend/_IGNORE_session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/05/10-08:56:03.655 8703 Recovering log #10
+2023/05/10-08:56:03.670 8703 Reusing old log /Users/brainardmarayathomso/Downloads/Thesis Website/backend/_IGNORE_session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000010.log 
+2023/05/10-08:56:18.295 8703 Level-0 table #15: started
+2023/05/10-08:56:18.313 8703 Level-0 table #15: 1063112 bytes OK
+2023/05/10-08:56:18.324 8703 Delete type=0 #10
+2023/05/10-08:56:18.326 8703 Compacting 1@1 + 1@2 files
+2023/05/10-08:56:18.362 8703 Generated table #16@1: 31106 keys, 1184733 bytes
+2023/05/10-08:56:18.362 8703 Compacted 1@1 + 1@2 files => 1184733 bytes
+2023/05/10-08:56:18.372 8703 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/05/10-08:56:19.527 8703 Level-0 table #18: started
+2023/05/10-08:56:19.550 8703 Level-0 table #18: 1105126 bytes OK
+2023/05/10-08:56:19.560 8703 Delete type=0 #14
+2023/05/10-08:56:19.560 8703 Delete type=2 #15
+2023/05/10-08:56:19.560 8703 Delete type=2 #12
+2023/05/10-08:56:19.597 8703 Compacting 1@1 + 1@2 files
+2023/05/10-08:56:19.639 8703 Generated table #19@1: 44066 keys, 1612233 bytes
+2023/05/10-08:56:19.639 8703 Compacted 1@1 + 1@2 files => 1612233 bytes
+2023/05/10-08:56:19.649 8703 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/05/10-08:56:19.649 8703 Delete type=2 #18
+2023/05/10-08:56:41.031 8503 Level-0 table #21: started
+2023/05/10-08:56:41.049 8503 Level-0 table #21: 921390 bytes OK
+2023/05/10-08:56:41.058 8503 Delete type=0 #17
+2023/05/10-08:56:41.058 8503 Delete type=2 #16
+2023/05/10-08:56:41.195 8703 Compacting 1@1 + 1@2 files
+2023/05/10-08:56:41.247 8703 Generated table #22@1: 40181 keys, 1607709 bytes
+2023/05/10-08:56:41.247 8703 Compacted 1@1 + 1@2 files => 1607709 bytes
+2023/05/10-08:56:41.257 8703 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/05/10-08:56:41.258 8703 Delete type=2 #21
+2023/05/10-08:56:41.258 8703 Delete type=2 #19

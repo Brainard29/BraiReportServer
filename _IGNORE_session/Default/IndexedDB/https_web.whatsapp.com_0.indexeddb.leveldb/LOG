@@ -1,0 +1,30 @@
+2023/05/13-00:04:46.417 8503 Reusing MANIFEST /Users/brainardmarayathomso/Downloads/Reporting Information System/backend/_IGNORE_session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/05/13-00:04:46.417 8503 Recovering log #20
+2023/05/13-00:04:46.432 8503 Reusing old log /Users/brainardmarayathomso/Downloads/Reporting Information System/backend/_IGNORE_session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000020.log 
+2023/05/13-00:05:01.352 8503 Level-0 table #25: started
+2023/05/13-00:05:01.373 8503 Level-0 table #25: 1144128 bytes OK
+2023/05/13-00:05:01.384 8503 Delete type=0 #20
+2023/05/13-00:05:01.427 fb03 Compacting 1@1 + 1@2 files
+2023/05/13-00:05:01.478 fb03 Generated table #26@1: 45933 keys, 1845789 bytes
+2023/05/13-00:05:01.478 fb03 Compacted 1@1 + 1@2 files => 1845789 bytes
+2023/05/13-00:05:01.487 fb03 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/05/13-00:05:01.487 fb03 Delete type=2 #22
+2023/05/13-00:05:01.487 fb03 Delete type=2 #25
+2023/05/13-00:05:02.075 fb03 Level-0 table #28: started
+2023/05/13-00:05:02.095 fb03 Level-0 table #28: 1148078 bytes OK
+2023/05/13-00:05:02.105 fb03 Delete type=0 #24
+2023/05/13-00:05:02.411 8503 Compacting 1@1 + 1@2 files
+2023/05/13-00:05:02.480 8503 Generated table #29@1: 50186 keys, 1957276 bytes
+2023/05/13-00:05:02.480 8503 Compacted 1@1 + 1@2 files => 1957276 bytes
+2023/05/13-00:05:02.489 8503 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/05/13-00:05:02.489 8503 Delete type=2 #28
+2023/05/13-00:05:02.489 8503 Delete type=2 #26
+2023/05/13-00:05:27.846 8503 Level-0 table #31: started
+2023/05/13-00:05:27.875 8503 Level-0 table #31: 958853 bytes OK
+2023/05/13-00:05:27.885 8503 Delete type=0 #27
+2023/05/13-00:05:27.895 a603 Compacting 1@1 + 1@2 files
+2023/05/13-00:05:27.946 a603 Generated table #32@1: 50898 keys, 1995176 bytes
+2023/05/13-00:05:27.946 a603 Compacted 1@1 + 1@2 files => 1995176 bytes
+2023/05/13-00:05:27.956 a603 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/05/13-00:05:27.956 a603 Delete type=2 #29
+2023/05/13-00:05:27.956 a603 Delete type=2 #31
