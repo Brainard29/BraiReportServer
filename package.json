@@ -15,7 +15,6 @@
 		"mysql2": "^2.3.3",
 		"path": "^0.12.7",
 		"sequelize": "^6.25.5",
-		"twilio": "^3.83.1",
 		"url": "^0.11.0"
 	},
 	"name": "erd-react",
@@ -24,7 +23,9 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"start": "node index.js"
+		"start": "node index.js",
+		"postinstall": "npm install @open-wa/wa-automate"
+
 	},
 	"repository": {
 		"type": "git",
