@@ -21,7 +21,7 @@ app.use(session({
     saveUninitialized: true,
 }));
 //app.use(cors());
-app.use(cors({ credentials: true, origin: 'https://main--imaginative-pegasus-19b45c.netlify.app' }));
+app.use(cors({ credentials: true, origin: 'https://main--enchanting-heliotrope-82856e.netlify.app' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
