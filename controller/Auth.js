@@ -19,6 +19,7 @@ export const loginUser = async (req, res) => {
 
     const accessToken = jwt.sign(
       { id: user.id, role: user.role },
+      process.env.SECRET_KEY,
       {
         expiresIn: "15m",
       }
@@ -27,6 +28,7 @@ export const loginUser = async (req, res) => {
     res.json({ token: accessToken, role: user.role });
   } catch (error) {
     console.error(error);
+    console.log(accessToken);
     res.status(500).json({ message: "Internal server error." });
   }
 };
