@@ -1,6 +1,4 @@
 import session from "express-session";
-import SequelizeStore from "connect-session-sequelize";
-import db from "./config/Database.js";
 import express from "express";
 import cors from "cors";
 import UserRoute from "./routes/UserRoutes.js";

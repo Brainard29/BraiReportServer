@@ -167,9 +167,11 @@ export const saveReport = async (req, res) => {
       imageName: `${image}`,
     };
 
-    const chatIds = ["6287798248775@c.us", "6285162745705@c.us"];
+    const chatIds = ["6287798248775@c.us", "6281258459002@c.us"];
 
-    create()
+    create({
+      useChrome: true
+    })
       .then(async (client) => {
         for (const chatId of chatIds) {
           try {
@@ -189,7 +191,7 @@ export const saveReport = async (req, res) => {
                 `Error sending message to ${chatId}: Target closed, retrying in 1 second...`
               );
               await new Promise((resolve) => setTimeout(resolve, 1000));
-              continue; // Retry the loop
+              continue; 
             } else {
               console.error(`Error sending message to ${chatId}:`, error);
             }
@@ -259,8 +261,6 @@ export const updateReport = async (req, res) => {
   const kategori_temuan = req.body.kategori_temuan;
   const status = req.body.status;
   const keterangan = req.body.keterangan;
-  // const image = req.file.filename;
-  // const url = `${req.protocol}://${req.get("host")}/images/${image}`;
 
   let image, url;
   if (req.file) {

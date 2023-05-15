@@ -1,3 +1,2 @@
-2023/05/13-00:04:46.454 8503 Reusing MANIFEST /Users/brainardmarayathomso/Downloads/Reporting Information System/backend/_IGNORE_session/Default/File System/Origins/MANIFEST-000001
-2023/05/13-00:04:46.454 8503 Recovering log #3
-2023/05/13-00:04:46.454 8503 Reusing old log /Users/brainardmarayathomso/Downloads/Reporting Information System/backend/_IGNORE_session/Default/File System/Origins/000003.log 
+2023/05/15-09:00:23.876 6a07 Creating DB /Users/brainardmarayathomso/Downloads/Reporting Information System/backend/_IGNORE_session/Default/File System/Origins since it was missing.
+2023/05/15-09:00:23.896 6a07 Reusing MANIFEST /Users/brainardmarayathomso/Downloads/Reporting Information System/backend/_IGNORE_session/Default/File System/Origins/MANIFEST-000001
