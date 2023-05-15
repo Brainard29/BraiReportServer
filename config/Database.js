@@ -2,8 +2,8 @@ import {Sequelize} from "sequelize";
 import dotenv from "dotenv";
 dotenv.config();
 
-const db = new Sequelize(process.env.DATABASE_NAME,process.env.DATABASE_USERNAME,process.env.DATABASE_PASSWORD,{
-    host: process.env.DATABASE_HOST,
+const db = new Sequelize("heroku_5579fef6a42a99f","ba59fe0e2c1af8","1e0ea26d",{
+    host: "us-cdbr-east-06.cleardb.net",
     dialect: "mysql"
 });
 
