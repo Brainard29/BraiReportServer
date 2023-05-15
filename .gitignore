@@ -1,6 +1,5 @@
 node_modules/
 .env
-package-lock.json
 
 # managed by open-wa
 **.data.json
