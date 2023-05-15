@@ -8,4 +8,3 @@ const db = new Sequelize(process.env.DATABASE_NAME,process.env.DATABASE_USERNAME
 });
 
 export default db;
-
