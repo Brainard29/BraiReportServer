@@ -167,7 +167,8 @@ export const saveReport = async (req, res) => {
       imageName: `${image}`,
     };
 
-    const chatIds = ["6285163090109@c.us", "6281258459002@c.us", "6281250010929@c.us", "6281328886901@c.us", ];
+    //const chatIds = ["6285163090109@c.us", "6281258459002@c.us", "6281250010929@c.us", "6281328886901@c.us", ];
+    const chatIds = ["6287798248775@c.us", "6285162745705@c.us"];
 
     create({
       useChrome: true
