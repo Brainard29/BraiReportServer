@@ -2,8 +2,8 @@ import {Sequelize} from "sequelize";
 import dotenv from "dotenv";
 dotenv.config();
 
-const db = new Sequelize("heroku_5579fef6a42a99f","ba59fe0e2c1af8","1e0ea26d",{
-    host: "us-cdbr-east-06.cleardb.net",
+const db = new Sequelize("brai4413_security_report","brai4413_admin","?r^dQNW%f9@P",{
+    host: "api2.braireport.site",
     dialect: "mysql"
 });
 
